@@ -1,19 +1,15 @@
 #include "config.h"
-
 #include "block.h"
 #include "util.h"
 
 Block blocks[] = {
-    {"sb-mail",    600,  1 },
-    {"sb-music",   0,    2 },
-    {"sb-disk",    1800, 3 },
-    {"sb-memory",  10,   4 },
-    {"sb-loadavg", 5,    5 },
-    {"sb-mic",     0,    6 },
-    {"sb-record",  0,    7 },
-    {"sb-volume",  0,    8 },
-    {"sb-battery", 5,    9 },
-    {"sb-date",    1,    10},
+    {"$HOME/.config/i3/scripts/kblayout", 3,  0},
+    {"$HOME/.local/bin/status/cputemp",   5,  0},
+    {"$HOME/.local/bin/status/ram",      13,  8},
+    {"$HOME/.local/bin/status/wifi",     29,  9},
+    {"$HOME/.local/bin/status/volume",   27,  11},
+    {"$HOME/.local/bin/status/battery",  29,  0},
+    {"date '+%a %d, %H:%M'",	          5,  0}
 };
 
 const unsigned short blockCount = LEN(blocks);
