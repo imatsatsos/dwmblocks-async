@@ -32,7 +32,11 @@ int updateStatus(BarStatus *status) {
 
         if (strlen(block->output)) {
 #if LEADING_DELIMITER
+
+        if (block != &blocks[0]) {
             strcat(status->current, DELIMITER);
+        }
+
 #else
             if (status->current[0]) strcat(status->current, DELIMITER);
 #endif
